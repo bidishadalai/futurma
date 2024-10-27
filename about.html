@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Futuristic Home Security</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0f14 url('space-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #cfd9e1;
+        }
+
+        .content {
+            margin: 50px;
+            padding: 20px;
+            background: rgba(17, 25, 40, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+            font-family: 'Roboto', sans-serif;
+            color: #e8e8e8;
+            position: relative;
+        }
+
+        .glitter-text {
+            position: relative;
+            display: inline-block;
+            background: linear-gradient(135deg, #00d2ff, #9c27b0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glitter 3s infinite;
+        }
+
+        .video-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .centered-video {
+            width: 80%; /* Adjust width to fit better */
+            max-width: 600px; /* Set a maximum width */
+            border: 3px solid #00d2ff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.7);
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .image-container {
+            text-align: center; /* Center align the image */
+            margin: 20px 0; /* Add margin around the image */
+        }
+
+        .team-image {
+            width: 80%; /* Set image width */
+            max-width: 600px; /* Set a maximum width */
+            border-radius: 10px; /* Round the corners */
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.7); /* Add shadow for depth */
+        }
+
+        .ripple-text {
+            font-size: 3rem;
+            text-align: center;
+            color: #00d2ff;
+            animation: ripple 2s infinite;
+        }
+
+        .changing-hello {
+            display: inline-block;
+            animation: fade-in-out 3s infinite;
+        }
+
+        .suggestion-box {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #00d2ff;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #cfd9e1;
+        }
+
+        .suggestion-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00d2ff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.2);
+            color: #e8e8e8;
+        }
+
+        .submit-button {
+            background: #00d2ff;
+            color: #0d0f14;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #9c27b0;
+        }
+
+        .nav-button {
+            font-size: 1.5rem; /* Make the navigation buttons larger */
+            padding: 10px 20px; /* Add padding for a cuter appearance */
+            margin: 5px; /* Space between buttons */
+            background: rgba(0, 210, 255, 0.5);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .nav-button:hover {
+            background: #9c27b0;
+        }
+
+        @keyframes ripple {
+            0% { text-shadow: 0 0 5px #00d2ff, 0 0 10px #00d2ff, 0 0 15px #00d2ff, 0 0 20px #00d2ff; }
+            50% { text-shadow: 0 0 10px #00d2ff, 0 0 20px #00d2ff, 0 0 25px #00d2ff, 0 0 30px #00d2ff; }
+            100% { text-shadow: 0 0 5px #00d2ff, 0 0 10px #00d2ff, 0 0 15px #00d2ff, 0 0 20px #00d2ff; }
+        }
+
+        @keyframes fade-in-out {
+            0%, 100% { opacity: 0; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes glitter {
+            0% { text-shadow: 0 0 5px #00d2ff, 0 0 10px #ff8ae2, 0 0 20px #ff8ae2; }
+            50% { text-shadow: 0 0 10px #9c27b0, 0 0 20px #00d2ff, 0 0 30px #9c27b0; }
+            100% { text-shadow: 0 0 5px #00d2ff, 0 0 10px #ff8ae2, 0 0 20px #ff8ae2; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #0a0d13;
+            color: #00d2ff;
+        }
+
+        p {
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="ripple-text">
+            <span class="changing-hello" id="hello-text">About Us</span>
+        </h1>
+        <nav class="navbar">
+            <button class="nav-button" onclick="navigateTo('index.html')">Home</button>
+            <button class="nav-button" onclick="navigateTo('about.html')">About Us</button>
+            <button class="nav-button" onclick="navigateTo('activity-log.html')">Activity Log</button>
+        </nav>
+        <button class="nav-button" onclick="navigateTo('questions-box.html')">Chat with us</button>
+    </header>
+    <main>
+        <div class="content">
+            <h2 class="glitter-text">👥 Meet Our Team</h2>
+            <p>
+                We are a group of passionate technology enthusiasts who believe in the power of innovation. Together, we have developed this futuristic home security system that not only prioritizes safety but also integrates seamlessly with modern technology.
+            </p>
+            <p>
+                Our mission is to create a safe environment for families and individuals while making technology more accessible and engaging. 
+                ~ Anika, Benjamin, Bidisha, and Ordalys 💖
+            </p>
+            <p>
+            </p>
+
+            <div class="image-container">
+                <img src="path_to_your_group_picture.jpeg" alt="Group Picture" class="team-image">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Futurama, Home Security. All rights reserved.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
