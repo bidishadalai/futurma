@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suggestions/Questions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0d0f14 url('space-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #cfd9e1;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: rgba(17, 25, 40, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.6);
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #00d2ff;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            margin: 15px 0;
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #00d2ff;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #e8e8e8;
+        }
+
+        .submit-button {
+            background: #00d2ff;
+            color: #0d0f14;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background: #9c27b0;
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #00d2ff;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Suggestions / Questions</h1>
+        <form>
+            <input type="text" class="input-field" placeholder="Your Name" required>
+            <input type="email" class="input-field" placeholder="Your Email" required>
+            <textarea class="input-field" rows="4" placeholder="Your Suggestion/Question" required></textarea>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 Futurama, Home Security. All rights reserved.</p>
+    </footer>
+</body>
+</html>
