@@ -1,0 +1,38 @@
+// Define pins
+const int trigPin = 9;  // Pin connected to the Trig pin of the sensor
+const int echoPin = 10; // Pin connected to the Echo pin of the sensor
+
+void setup() {
+  // Initialize the serial communication
+  Serial.begin(9600);
+
+  // Set the trigger pin as OUTPUT and echo pin as INPUT
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+void loop() {
+  // Clear the trigger pin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+
+  // Set the trigger pin high for 10 microseconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  // Measure the duration of the echo
+  long duration = pulseIn(echoPin, HIGH);
+
+  // Calculate the distance (duration / 2 because the signal travels to the object and back)
+  // Speed of sound is 343 m/s, so we use 0.0343 cm/µs
+  int distance = duration * 0.0343 / 2;
+
+  // Print the distance to the Serial Monitor
+  Serial.print("Distance: ");
+  Serial.print(distance);
+  Serial.println(" cm");
+
+  // Add a short delay before the next measurement
+  delay(500);
+}
